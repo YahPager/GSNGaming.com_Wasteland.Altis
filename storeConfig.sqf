@@ -13,7 +13,7 @@ currentOwnerName = "";
 pistolArray = compileFinal str
 [
 	// Handguns
-    ["P07 Pistol", "hgun_P07_F", 50],
+	["P07 Pistol", "hgun_P07_F", 50],
 	["Rook-40 Pistol", "hgun_Rook40_F", 50],
 	["ACP-C2 Pistol", "hgun_ACPC2_F", 75],
 	["Zubr Revolver", "hgun_Pistol_heavy_02_F", 75],
@@ -83,8 +83,8 @@ allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call 
 
 staticGunsArray = compileFinal str
 [
-    ["Mk30 HMG .50 Low (NATO)", "B_HMG_01_F", 5000],
-    ["Mk30 HMG .50 Low (CSAT)", "O_HMG_01_F", 5000],
+	["Mk30 HMG .50 Low (NATO)", "B_HMG_01_F", 5000],
+	["Mk30 HMG .50 Low (CSAT)", "O_HMG_01_F", 5000],
 	["Mk30 HMG .50 Low (AAF)", "I_HMG_01_F", 5000],
 	// ["Mk30A HMG .50 (NATO)", "B_HMG_01_A_F", 5300], // "A" = Autonomous = Overpowered
 	// ["Mk30A HMG .50 (CSAT)", "O_HMG_01_A_F", 5300],
@@ -222,11 +222,11 @@ accessoriesArray = compileFinal str
 	["RCO", "optic_Hamr", 150, "item"],
 	["DMS", "optic_DMS", 175, "item"],
 	["LRPS", "optic_LRPS", 175, "item"],
-	["SOS", "optic_SOS", 200, "item"],
-	["NVS", "optic_NVS", 400, "item"],
+	["SOS", "optic_SOS", 200, "item"]
+	/*["NVS", "optic_NVS", 400, "item"],
 	["TWS", "optic_tws", 600, "item"],
 	["TWS MG", "optic_tws_mg", 650, "item"],
-	["Nightstalker", "optic_Nightstalker", 750, "item"]
+	["Nightstalker", "optic_Nightstalker", 750, "item"]*/
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -600,11 +600,13 @@ helicoptersArray = compileFinal str
 	["MH-9 Hummingbird", "B_Heli_Light_01_F", 5000, "vehicle", ""], //little bird
 	["PO-30 Orca (Black)", "O_Heli_Light_02_unarmed_F", 6000, "vehicle", ""], //ka-60
 	["CH-49 Mohawk", "I_Heli_Transport_02_F", 8000, "vehicle", ""], //big transport chopper
+        ["WY-55 Hellcat", "I_Heli_Light_03_unarmed_F", 7000, "vehicle", ""], //WY-55 Hellcat
 	
 	["UH-80 Ghosthawk", "B_Heli_Transport_01_F", 10000, "vehicle", ""], //stealth chopper 2 miniguns
 	["UH-80 Ghosthawk (Camo)", "B_Heli_Transport_01_camo_F", 10000, "vehicle", ""], //stealth chopper 2 miniguns (green camo)
 	["AH-9 Pawnee", "B_Heli_Light_01_armed_F", 12000, "vehicle", ""], //little bird with guns and missiles
 	["PO-30 Orca", "O_Heli_Light_02_F", 13000, "vehicle", ""], //armed ka-60
+        ["WY-55 Hellcat", "I_Heli_Light_03_F", 14000, "vehicle", ""], //Armed WY-55 Hellcat
 	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 20000, "vehicle", ""], //attack chopper
 	["Mi-48 Kajman", "O_Heli_Attack_02_F", 25000, "vehicle", ""], //attack chopper with gunner
 	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 25000, "vehicle", ""] //attack chopper with gunner
@@ -663,9 +665,8 @@ uavArray = compileFinal str
 	"I_UGV_01_rcws_F"
 ];
 
-noColorVehicles = compileFinal str
+/*noColorVehicles = compileFinal str
 [
-	/*
 	"Hatchback_01_base_F",
 	"Van_01_base_F",
 	"SUV_01_base_F",
@@ -681,12 +682,10 @@ noColorVehicles = compileFinal str
 	"O_APC_Tracked_02_cannon_F",
 	"MBT_01_base_F",
 	"MBT_02_base_F"
-	*/
 ];
 
 rgbOnlyVehicles = compileFinal str 
 [
-	/*
 	"Quadbike_01_base_F",
 	"Truck_02_base_F",
 	"Heli_Transport_01_base_F",
@@ -696,8 +695,7 @@ rgbOnlyVehicles = compileFinal str
 	"Rescue_duck_base_F",
 	"O_SDV_01_F",
 	"I_SDV_01_F"
-	*/
-];
+];*/
 
 //color, isARGB
 colorsArray = compileFinal str
@@ -728,12 +726,12 @@ customPlayerItems = compileFinal str
 	["Canned Food", "cannedfood", localize "STR_WL_ShopDescriptions_CanFood", "client\icons\cannedfood.paa", 30, 15],
 	["Repair Kit", "repairkit", localize "STR_WL_ShopDescriptions_RepairKit", "client\icons\briefcase.paa", 500, 250],
 	["Jerry Can (Full)", "jerrycanfull", localize "STR_WL_ShopDescriptions_fuelFull", "client\icons\jerrycan.paa", 150, 75],
-    ["Jerry Can (Empty)", "jerrycanempty", localize "STR_WL_ShopDescriptions_fuelEmpty", "client\icons\jerrycan.paa", 50, 25],
-    ["Spawn Beacon", "spawnbeacon", localize "STR_WL_ShopDescriptions_spawnBeacon", "client\icons\briefcase.paa", 1500, 750],
-    ["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\briefcase.paa", 200, 100],
-    ["Syphon Hose", "syphonhose", localize "STR_WL_ShopDescriptions_SyphonHose", "client\icons\jerrycan.paa", 200, 100],
-    ["Energy Drink", "energydrink", localize "STR_WL_ShopDescriptions_Energy_Drink", "client\icons\water.paa", 100, 50],
-    ["Warchest", "warchest", localize "STR_WL_ShopDescriptions_Warchest", "client\icons\briefcase.paa", 1000, 500]
+	["Jerry Can (Empty)", "jerrycanempty", localize "STR_WL_ShopDescriptions_fuelEmpty", "client\icons\jerrycan.paa", 50, 25],
+	["Spawn Beacon", "spawnbeacon", localize "STR_WL_ShopDescriptions_spawnBeacon", "client\icons\briefcase.paa", 1500, 750],
+	["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\briefcase.paa", 200, 100],
+	["Syphon Hose", "syphonhose", localize "STR_WL_ShopDescriptions_SyphonHose", "client\icons\jerrycan.paa", 200, 100],
+	["Energy Drink", "energydrink", localize "STR_WL_ShopDescriptions_Energy_Drink", "client\icons\water.paa", 100, 50],
+	["Warchest", "warchest", localize "STR_WL_ShopDescriptions_Warchest", "client\icons\briefcase.paa", 1000, 500]
 ];
 
 
@@ -741,6 +739,10 @@ customPlayerItems = compileFinal str
 //
 // Array contents are as follows:
 // Name, Building Position, Desk Direction Modifier, Excluded Buttons
+
+// Note if Building Position
+	//Type = Scalar  Position = BuildingPosition
+	//Type = Array   Position = Pos ATL
 storeOwnerConfig = compileFinal str
 [
 	["GenStore1", 6, 240, []],
