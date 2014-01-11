@@ -12,24 +12,32 @@ cityList = compileFinal str
 [
 	["Town_1", 400, "Kavala"],
 	["Town_2", 300, "Agios Dionysios"],
-	["Town_3", 150, "Abdera"],
-	["Town_4", 250, "Athira"],
-	["Town_5", 200, "Telos"],
-	["Town_6", 200, "Sofia"],
+	["Town_3", 160, "Abdera"],
+	["Town_4", 260, "Athira"],
+	["Town_5", 260, "Telos"],
+	["Town_6", 300, "Sofia"],
 	["Town_7", 200, "Paros"],
 	["Town_8", 300, "Pyrgos"],
-	["Town_9", 150, "Selakano"],
+	["Town_9", 200, "Selakano"],
 	["Town_10", 200, "Vikos"],
-	["Town_11", 250, "Zaros"],
-	["Town_12", 250, "Neochori"],
-	["Town_13", 250, "Aggelochori"],
+	["Town_11", 300, "Zaros"],
+	["Town_12", 260, "Neochori"],
+	["Town_13", 260, "Aggelochori"],
 	["Town_14", 200, "Panochori"],
 	["Town_15", 200, "Charkia"],
-	["Town_16", 150, "Chalkeia"],
-	["Town_17", 150, "Oreokastro"],
-	["Town_18", 100, "Dump"],
-	["Town_19", 125, "Negades"],
-	["Town_20", 100, "Frini"]
+	["Town_16", 200, "Chalkeia"],
+	["Town_17", 160, "Oreokastro"],
+	["Town_18", 140, "Dump"],
+	["Town_19", 140, "Negades"],
+	["Town_20", 120, "Frini"],
+        ["Town_21", 120, "Koroni"],
+	["Town_22", 160, "Syrta"],
+	["Town_23", 100, "Sfaka"],
+	["Town_24", 100, "Almyra Airfield"],
+	["Town_25", 100, "Molos Airfield"],
+	["Town_26", 200, "Gravia"],
+	["Town_27", 100, "Ifestiona"],
+	["Town_28", 160, "Kore"]
 ];
 
 militarylist = compileFinal str
@@ -70,37 +78,30 @@ config_player_saving_enabled = compileFinal "0";
 config_player_donations_enabled = compileFinal "0";
 
 // How much do players spawn with?
-config_initial_spawn_money = compileFinal "100";
+config_initial_spawn_money = compileFinal "250";
 
-// Territory system definitions. See territory/README.md for more details.
-//
-// Format is:
-// 1 - Territory marker name. Must begin with 'TERRITORY_'
-// 2 - Descriptive name
-// 3 - Monetary value
-// 4 - Territory category, currently unused. See territory/README.md for details.
 config_territory_markers = compileFinal str
 [
-	["TERRITORY_THRONOS_CASTLE", "Thronos Castle", 300, "CASTLE"],
-	["TERRITORY_KASTRO_CASTLE", "Kastro Castle", 300, "CASTLE"],
-	["TERRITORY_SW_AIRFIELD", "Southwest Airfield", 300, "AIRFIELD"],
-	["TERRITORY_MAIN_AIRBASE_SW", "Main Airbase (SW)", 200, "AIRBASE"],
-	["TERRITORY_MAIN_AIRBASE_CENTER", "Main Airbase (Center)", 200, "AIRBASE"],
-	["TERRITORY_MAIN_AIRBASE_NE", "Main Airbase (NE)", 200, "AIRBASE"],
-	["TERRITORY_NE_AIRFIELD", "Northeast Airfield", 300, "AIRFIELD"],
-	["TERRITORY_SE_AIRFIELD", "Southeast Airfield", 300, "AIRFIELD"],
-	["TERRITORY_NW_AIRFIELD", "Northwest Airfield", 300, "AIRFIELD"],
-	["TERRITORY_SALTFLATS_AIRFIELD", "Saltflats", 300, "AIRFIELD"],
-	["TERRITORY_WEST_POWER_PLANT", "West Power Plant", 300, "POWER"],
-	["TERRITORY_CENTER_POWER_PLANT", "Center Power Plant", 300, "POWER"],
-	["TERRITORY_EAST_POWER_PLANT", "East Power Plant", 300, "POWER"],
-	["TERRITORY_IRAKLIA_RUINS", "Iraklia Ruins", 300, "RUINS"],
-	["TERRITORY_ARTINARKI_RUINS", "Artinarki Ruins", 300, "RUINS"],
-	["TERRITORY_MOLOS_TRANSMITTER", "Molos Transmitter", 300, "TRANSMITTER"],
-	["TERRITORY_DIDYMOS_TRANSMITTER_1", "Didymos Transmitter One", 300, "TRANSMITTER"],
-	["TERRITORY_DIDYMOS_TRANSMITTER_2", "Didymos Transmitter Two", 300, "TRANSMITTER"],
-	["TERRITORY_MAGOS_TRANSMITTER", "Magos Transmitter", 300, "TRANSMITTER"],
-	["TERRITORY_PYRSOS_TRANSMITTER", "Pyrsos Transmitter", 300, "TRANSMITTER"],
-	["TERRITORY_MILITARY_RESEARCH", "Telos Research Facility", 300, "MILITARY"]
+	["TERRITORY_TAB_NE", "Telos Airbase NE", 250, "AIRBASE"],
+	["TERRITORY_TAB_SW", "Telos Airbase SW", 250, "AIRBASE"],
+	["TERRITORY_TAB_HOSPITAL", "Telos Airbase Hospital", 500, "HOSPITAL"],
+	["TERRITORY_MILITARY", "Telos Military Research", 250, "MILITARY"],
+	["TERRITORY_TELOS_PP", "Telos Power Plant", 250, "POWER"],
+	["TERRITORY_AAC", "AAC Airfield", 250, "AIRFIELD"],
+	["TERRITORY_KASTRO_CASTLE", "Kastro Castle", 500, "CASTLE"],
+	["TERRITORY_MAGOS", "Magos Transmitter", 250, "TRANSMITTER"],
+	["TERRITORY_MAGOS_PP", "Magos Power Plant", 250, "POWER"],
+	["TERRITORY_THRONOS_CASTLE", "Thronos Castle", 500, "CASTLE"],
+	["TERRITORY_ARISTI_AF", "Aristi Airfield", 250, "AIRFIELD"],
+	["TERRITORY_PYRSOS", "Pyrsos Transmitter", 250, "TRANSMITTER"],
+	["TERRITORY_DIDYMOS", "Didymos Transmitter", 250, "TRANSMITTER"],
+	["TERRITORY_PANAGIA", "Panagia Transmitter", 250, "TRANSMITTER"],
+	["TERRITORY_ARTINARKI", "Artinarki Ruins", 250, "RUINS"],
+	["TERRITORY_SELAKANO_AF", "Selakano Airfield", 250, "AIRFIELD"],
+	["TERRITORY_ALMYRA_AF", "Almyra Airfield", 250, "AIRFIELD"],
+	["TERRITORY_SOFIA_PP", "Sofia Power Plant", 250, "POWER"],
+	["TERRITORY_SOFIA", "Sofia Transmitters", 250, "TRANSMITTER"],
+	["TERRITORY_MOLOS_AF", "Molos Airfield", 250, "AIRFIELD"],
+        ["TERRITORY_STADIUM", "Negades Stadium", 250, "STADIUM"],
+	["TERRITORY_IRAKLIA", "Iraklia Ruins", 250, "RUINS"]
 ];
-
