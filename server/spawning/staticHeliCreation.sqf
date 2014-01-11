@@ -12,9 +12,6 @@ private ["_isWreck", "_spawnPos", "_spawnType", "_finalPos", "_currHeli"];
 _isWreck = _this select 0;
 _spawnPos = _this select 1;
 
-//if (_isWreck == 0) then
-//{
-	//diag_log "Spawning heli...";
 	_spawnType = staticHeliList call BIS_fnc_selectRandom;
 	_finalPos = _spawnPos findEmptyPosition [0, 50, _spawnType];
 	
@@ -29,20 +26,3 @@ _spawnPos = _this select 1;
 	_currHeli setVehicleAmmo 0.5;
 	_currHeli spawn cleanVehicleWreck;
 	_currHeli setDir (random 360);
-/*}
-else 
-{
-	//diag_log "Spawning heli wreck...";
-	_spawnType = staticHeliList call BIS_fnc_selectRandom;
-	_currHeli = createVehicle [_spawnType,_spawnPos,[], 50,"None"]; 
-	
-	_currHeli setpos [getpos _currHeli select 0,getpos _currHeli select 1,0];
-	
-	clearMagazineCargoGlobal _currHeli;
-	clearWeaponCargoGlobal _currHeli;
-	
-	//Set original status to stop ner-do-wells
-	_currHeli setVariable [call vChecksum, true, false];  
-    
-    _currHeli setDamage 1; // Destroy this heli on the spot so it looks like a realistic crash.
-};*/
