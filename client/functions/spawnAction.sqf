@@ -29,9 +29,9 @@ spawnActionHandle = _params spawn
 		player setVariable["cmoney",_baseMoney,true];
 	};
 
-	[MF_ITEMS_CANNED_FOOD, 1] call mf_inventory_add;
-	[MF_ITEMS_WATER, 1] call mf_inventory_add;
-	[MF_ITEMS_REPAIR_KIT, 1] call mf_inventory_add;
+	[MF_ITEMS_CANNED_FOOD, 2] call mf_inventory_add;
+	[MF_ITEMS_WATER, 2] call mf_inventory_add;
+	[MF_ITEMS_REPAIR_KIT, 2] call mf_inventory_add;
 
 	// Remove unrealistic blur effects
 	ppEffectDestroy BIS_fnc_feedback_fatigueBlur;
@@ -50,9 +50,7 @@ spawnActionHandle = _params spawn
 			{ 	
 				_scriptHandle = [_buttonText] execVM "client\functions\spawnOnBeacon.sqf";
 				waitUntil {scriptDone _scriptHandle};
-			}
-			else
-			{
+			} else {
 				_scriptHandle = [_buttonText] execVM "client\functions\spawnInTown.sqf";
 				waitUntil {scriptDone _scriptHandle};
 			}; 
