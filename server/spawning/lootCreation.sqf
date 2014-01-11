@@ -4,13 +4,13 @@
 //	Adjusted for Arma3 Wasteland use by: [GoT] JoSchaap (GoT2DayZ.nl), 
 //	Player near town spawning concept by: Na_Palm (BIS-Forums)
 
-_odd1 = 45;					//The odds that a building is selected to place loot.
-_odd2 = 35;					//The odds that the selected building's spots will have loot(almost like odds per room).
-_odditem = 65;					//Chance of item instead of weapon
-_oddweapitem = 45;				//instead of the weapon picked in above declared chance above there's also a chance to spawn other items instead of a rifle like medkits,toolkits,optics,silencers etc.
+_odd1 = 60;					//The odds that a building is selected to place loot.
+_odd2 = 40;					//The odds that the selected building's spots will have loot(almost like odds per room).
+_odditem = 50;					//Chance of item instead of weapon
+_oddweapitem = 25;				//instead of the weapon picked in above declared chance above there's also a chance to spawn other items instead of a rifle like medkits,toolkits,optics,silencers etc.
 _oddfuelcan = 35;				//Chance of a spawned fuelcan to be full instead of empty
-_spawnradius = 25;				//Distance added to the radius around city's original marker to spawn loot (expands the radius with this value)
-_interval = 5400;				//Time (in sec.) to pass before a city spawns new loot (5400 - 1,5 hr)
+_spawnradius = 100;				//Distance added to the radius around city's original marker to spawn loot (expands the radius with this value)
+_interval = 1800;				//Time (in sec.) to pass before a city spawns new loot (5400 - 1,5 hr)
 randomweapontestint = 0.05;			//Sets the intervals in which weaponpositions are tested. (Lower = slower, but more accurate. Higher = faster, but less accurate.)
 									
 //Array of buildings that are eligeble to spawn loot in :)
@@ -87,10 +87,10 @@ _buildMIL =
 	"Cargo_House_base_F",
 	"Cargo_Patrol_base_F",
 	"Cargo_HQ_base_F"
-	//"Land_Hangar_F",
-	//"Cargo_Tower_base_F",
-	//"Land_Dome_Big_F",
-	//"Land_Dome_Small_F"
+	"Land_Hangar_F",
+	"Cargo_Tower_base_F",
+	"Land_Dome_Big_F",
+	"Land_Dome_Small_F"
 ];
 
 // weapons to be found in civilian buildings aside from items
@@ -115,7 +115,8 @@ randomweapon_weaponitemlist =
 	["muzzle_snds_M"],
 	["muzzle_snds_H"],
 	["muzzle_snds_acp"],
-	["optic_Aco"],
+	["optic_SOS"],
+	["optic_DMS"],
 	["optic_ACO_grn"],
 	["optic_aco_smg"],
 	["optic_Holosight"],
@@ -127,21 +128,21 @@ randomweapon_milweaponlist =
 [
 	["arifle_TRG20_F"],
 	["arifle_TRG21_F"],
-	["arifle_TRG21_GL_F"],
+	["hgun_Pistol_heavy_01_F"],
 	["arifle_Katiba_C_F"],
 	["arifle_Katiba_F"],
-	["arifle_Katiba_GL_F"],
+	["srifle_DMR_01_F"],
 	["arifle_MXC_F"],
 	["arifle_MX_F"],
-	["arifle_MX_GL_F"],
+	["srifle_EBR_F"],
 	["arifle_MXM_F"]
 ];
 
 
 randomweapon_itemlist = 
 [
-	"Land_BakedBeans_F", // Food
-	"Land_BottlePlastic_V2_F", // Water
+	"Land_Basket_F", // Food
+	"Land_CanisterPlastic_F", // Water
 	"Land_Suitcase_F",
 	"Land_CanisterFuel_F", //fuelcan
 	"Land_Can_V3_F", //energydrink redgull gives you stamina!
@@ -224,12 +225,12 @@ randomweapon_itemlist =
 		if(_class == "Land_Can_V3_F")then {
 			_item setVariable["mf_item_id", "energydrink", true];
 		};
-		if(_class == "Land_BakedBeans_F") then {
+		if(_class == "Land_Basket_F") then {
 			_item setVariable["mf_item_id", "cannedfood", true];
 		};
-		if(_class == "Land_BottlePlastic_V2_F") then {
+		if(_class == "Land_CanisterPlastic_F") then {
 			_item setVariable["mf_item_id", "water", true];
-		};
+    };
 		if(_class == "Land_Suitcase_F") then {
 			_item setVariable["mf_item_id", "repairkit", true];
 		};
