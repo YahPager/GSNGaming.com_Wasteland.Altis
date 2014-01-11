@@ -59,8 +59,8 @@ if(doKickTeamSwitcher) exitWith {
 };
 
 //Send player to debug zone to stop fake spawn locations.
-player setPosATL [7837.37,7627.14,0.00230217];
-player setDir 333.429;
+player setPosATL [25245.023,8500.9746,88.872696]; //Pre-Spawn Location
+player setDir 340.00;
 //             
 
 titleText ["Loading...", "BLACK OUT", 0.00001];
