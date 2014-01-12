@@ -458,8 +458,6 @@ genItemArray = compileFinal str
 	["Diving Goggles", "G_Diving", 100, "gogg"],
 	["Binoculars", "Binocular", 50, "binoc"],
 	["Rangefinder", "Rangefinder", 150, "binoc"],   
-	["Laser Designator", "Laserdesignator", 200, "binoc"],
-	["Laser Batteries", "Laserbatteries", 20, "mag"],
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
 	["Chemlight (Yellow)", "Chemlight_yellow", 25, "mag"],
@@ -514,7 +512,7 @@ genObjectsArray = compileFinal str
 allGenStoreVanillaItems = compileFinal str (call genItemArray + call genObjectsArray + call headArray + call uniformArray + call vestArray + call backpackArray);
 
 //Text name, classname, buy cost, spawn type, color
-/*landArray = compileFinal str
+landArray = compileFinal str
 [
 	["Quadbike (Civilian)", "C_Quadbike_01_F", 250, "vehicle", 125],
 	["Quadbike (NATO)", "B_Quadbike_01_F", 250, "vehicle", 125],
@@ -715,7 +713,7 @@ colorsArray = compileFinal str
 	["Red Camo", false],
 	["Yellow Camo", false],
 	["Pink Camo", false]
-];*/
+];
 
 //General Store Item List
 //Display Name, Class Name, Description, Picture, Buy Price, Sell Price.
@@ -745,37 +743,41 @@ customPlayerItems = compileFinal str
 	//Type = Array   Position = Pos ATL
 storeOwnerConfig = compileFinal str
 [
-	["GenStore1", 1, 178, []],
-	["GenStore2", 1, 95, []],
-	["GenStore3", 1, 30, []],
-	
-	["GunStore1", 1, 5, []],
-	["GunStore2", 1, 130, []],
-	["GunStore3", 2, 310, []],
-	["GunStore4", 1, 192, []]
-	
-//	["VehStore1", 1, 75, []],
-//	["VehStore2", 6, 45, ["Boats", "Submarines"]],
-//	["VehStore3", 4, 250, ["Boats", "Submarines"]],
-//	["VehStore4", 5, 155, ["Boats", "Submarines"]]
+        ["GenStore1", 6, 240, []],
+        ["GenStore2", 6, 250, []],
+        ["GenStore3", 6, 45, []],
+        ["GenStore4", 0, 265, []],
+        ["GenStore5", 5, 350, []],
+        
+        ["GunStore1", 1, 0, []],
+        ["GunStore2", 1, 75, []],
+        ["GunStore3", 6, 135, []],
+        ["GunStore4", 1, 65, []],
+        
+        ["VehStore1", 1, 75, []],
+        ["VehStore2", 6, 45, ["Boats", "Submarines"]],
+        ["VehStore3", 4, 250, ["Boats", "Submarines"]],
+        ["VehStore4", 5, 155, ["Boats", "Submarines"]]
 ];
-	
+        
 // Outfits for store owners
 storeOwnerConfigAppearance = compileFinal str
 [
-	['GenStore1', [['weapon', ''], ['uniform', 'U_IG_Guerilla2_2']]],
-	['GenStore2', [['weapon', ''], ['uniform', 'U_IG_Guerilla2_3']]],
-	['GenStore3', [['weapon', ''], ['uniform', 'U_IG_Guerilla3_1']]],
-	
-	['GunStore1', [['weapon', ''], ['uniform', 'U_B_SpecopsUniform_sgg']]],
-	['GunStore2', [['weapon', ''], ['uniform', 'U_O_SpecopsUniform_blk']]],
-	['GunStore3', [['weapon', ''], ['uniform', 'U_I_CombatUniform_tshirt']]],
-	['GunStore4', [['weapon', ''], ['uniform', 'U_IG_Guerilla1_1']]]
-	
-//	['VehStore1', [['weapon', ''], ['uniform', 'U_Competitor']]],
-//	['VehStore2', [['weapon', ''], ['uniform', 'U_Competitor']]],
-//	['VehStore3', [['weapon', ''], ['uniform', 'U_Competitor']]],
-//	['VehStore4', [['weapon', ''], ['uniform', 'U_Competitor']]]
+        ['GenStore1', [['weapon', ''], ['uniform', 'U_IG_Guerilla2_2']]],
+        ['GenStore2', [['weapon', ''], ['uniform', 'U_IG_Guerilla2_3']]],
+        ['GenStore3', [['weapon', ''], ['uniform', 'U_IG_Guerilla3_1']]],
+        ['GenStore4', [['weapon', ''], ['uniform', 'U_IG_Guerilla2_1']]],
+        ['GenStore5', [['weapon', ''], ['uniform', 'U_IG_Guerilla3_2']]],
+        
+        ['GunStore1', [['weapon', ''], ['uniform', 'U_B_SpecopsUniform_sgg']]],
+        ['GunStore2', [['weapon', ''], ['uniform', 'U_O_SpecopsUniform_blk']]],
+        ['GunStore3', [['weapon', ''], ['uniform', 'U_I_CombatUniform_tshirt']]],
+        ['GunStore4', [['weapon', ''], ['uniform', 'U_IG_Guerilla1_1']]],
+        
+        ['VehStore1', [['weapon', ''], ['uniform', 'U_Competitor']]],
+        ['VehStore2', [['weapon', ''], ['uniform', 'U_Competitor']]],
+        ['VehStore3', [['weapon', ''], ['uniform', 'U_Competitor']]],
+        ['VehStore4', [['weapon', ''], ['uniform', 'U_Competitor']]]
 ];
 
 storeConfigDone = compileFinal "true";

@@ -73,17 +73,14 @@ waterVehicles =
 "C_Boat_Civil_01_police_F",
 "C_Rubberboat",
 "O_Rubberboat",
-//"O_Boat_Armed_01_hmg_F",
 "B_G_Boat_Transport_01_F",
-//"I_Boat_Armed_01_minigun_F",
 "I_Boat_Transport_01_F"
 ];
 
 //Object List - Random Spawns.
 objectList =
 [
-"B_supplyCrate_F",
-"B_supplyCrate_F",
+"IG_supplyCrate_F",
 "CamoNet_INDP_open_F",
 "CamoNet_INDP_open_F",
 "Land_BagBunker_Large_F",
@@ -105,6 +102,7 @@ objectList =
 "Land_HBarrier_5_F",
 "Land_HBarrier_5_F",
 "Box_East_Wps_F",
+"IG_supplyCrate_F",
 "Land_HBarrierBig_F",
 "Land_HBarrierBig_F",
 "Land_HBarrierBig_F",
@@ -120,7 +118,8 @@ objectList =
 "Box_IND_Wps_F",
 "Land_Sacks_goods_F",
 "Land_Shoot_House_Wall_F",
-"Land_WaterBarrel_F"
+"Land_WaterBarrel_F",
+"IG_supplyCrate_F"
 ];
 
 //Object List - Random Spawns.
