@@ -4,7 +4,7 @@
 private ["_length", "_animation", "_check", "_args", "_success", "_failure", "_complete", "_start", "_previousAnim"];
 
 if a3w_actions_mutex exitWith {
-	["You're already doing something!", DURATION_FAILED] call a3w_actions_notify;
+    ["You're already doing something!", DURATION_FAILED] call a3w_actions_notify;
 };
 a3w_actions_mutex = true;
 
@@ -23,28 +23,28 @@ createDialog "ActionGUI";
 disableSerialization;
 _display = findDisplay 10101;
 _display displayAddEventHandler ["KeyDown", "_this select 1 == 1;"];
-_progressbar =  _display displayCtrl 10101;
+_progressbar = _display displayCtrl 10101;
 _struct_text = _display displayCtrl 10102;
 waitUntil {
-	private ["_progress", "_result", "_text"];
-	if (animationState player != _animation) then {player switchMove _animation};
-	if not a3w_actions_mutex then {
-		_failed = true;
-		["Action Cancelled", DURATION_FAILED] call a3w_actions_notify;
-	} else {
-		_progress = (time - _start)/_length;
-		_progressbar progressSetPosition _progress;
-		_result = ([_progress]+_args) call _check;
-		_break = _result select 0;
-		_text = _result select 1;
-		if _break then {
-			[_text, DURATION_FAILED] call a3w_actions_notify;
-			_failed = true;
-		} else {
-			_struct_text ctrlSetStructuredText parseText _text;
-		};
-	};
-	_start +_length < time or _failed;
+    private ["_progress", "_result", "_text"];
+    if (animationState player != _animation) then {player switchMove _animation};
+    if not a3w_actions_mutex then {
+        _failed = true;
+        ["Action Cancelled", DURATION_FAILED] call a3w_actions_notify;
+    } else {
+        _progress = (time - _start)/_length;
+        _progressbar progressSetPosition _progress;
+        _result = ([_progress]+_args) call _check;
+        _break = _result select 0;
+        _text = _result select 1;
+        if _break then {
+            [_text, DURATION_FAILED] call a3w_actions_notify;
+            _failed = true;
+        } else {
+            _struct_text ctrlSetStructuredText parseText _text;
+        };
+    };
+    _start +_length < time or _failed;
 };
 player switchMove _previousAnim;
 closeDialog 10101;

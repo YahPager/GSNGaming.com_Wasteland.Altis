@@ -53,4 +53,5 @@ if (_success) then {
     publicVariable "pvar_spawn_beacons";
 	["You placed the Spawn Beacon successfully!", 5] call mf_notify_client;
 };
-_success;
+_success;
+

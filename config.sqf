@@ -30,7 +30,7 @@ cityList = compileFinal str
 	["Town_18", 140, "Dump"],
 	["Town_19", 140, "Negades"],
 	["Town_20", 120, "Frini"],
-        ["Town_21", 120, "Koroni"],
+	["Town_21", 120, "Koroni"],
 	["Town_22", 160, "Syrta"],
 	["Town_23", 100, "Sfaka"],
 	["Town_24", 100, "Almyra Airfield"],
@@ -42,8 +42,8 @@ cityList = compileFinal str
 
 militarylist = compileFinal str
 [
-	["milSpawn_1"],
-	["milSpawn_2"],
+ 	["milSpawn_1"],
+ 	["milSpawn_2"],
 	["milSpawn_3"],
 	["milSpawn_4"],
 	["milSpawn_5"],
@@ -102,6 +102,6 @@ config_territory_markers = compileFinal str
 	["TERRITORY_SOFIA_PP", "Sofia Power Plant", 250, "POWER"],
 	["TERRITORY_SOFIA", "Sofia Transmitters", 250, "TRANSMITTER"],
 	["TERRITORY_MOLOS_AF", "Molos Airfield", 250, "AIRFIELD"],
-        ["TERRITORY_STADIUM", "Negades Stadium", 250, "STADIUM"],
+	["TERRITORY_STADIUM", "Negades Stadium", 250, "STADIUM"],
 	["TERRITORY_IRAKLIA", "Iraklia Ruins", 250, "RUINS"]
 ];

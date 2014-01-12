@@ -36,8 +36,8 @@ _hasFailed = {
     [_failed, _text];
 };
 
-_success =  [DURATION, ANIM, _hasFailed, [_beacon]] call a3w_actions_start;
-    
+ _success =  [DURATION, ANIM, _hasFailed, [_beacon]] call a3w_actions_start;
+ 
 if (_success) then {
     pvar_spawn_beacons = pvar_spawn_beacons - [_beacon];
     publicVariable "pvar_spawn_beacons";

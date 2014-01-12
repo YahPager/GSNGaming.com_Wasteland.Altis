@@ -12,15 +12,15 @@ _counter = 0;
 
 _boxList =
 [
-	//"Box_NATO_Wps_F",
-	"Box_NATO_WpsLaunch_F",
-	"Box_NATO_WpsSpecial_F",
-	//"Box_East_Wps_F",
-	"Box_East_WpsLaunch_F",
-	"Box_East_WpsSpecial_F",
-	//"Box_IND_Wps_F",
-	"Box_IND_WpsLaunch_F",
-	"Box_IND_WpsSpecial_F"
+//"Box_NATO_Wps_F",
+"Box_NATO_WpsLaunch_F",
+"Box_NATO_WpsSpecial_F",
+//"Box_East_Wps_F",
+"Box_East_WpsLaunch_F",
+"Box_East_WpsSpecial_F",
+//"Box_IND_Wps_F",
+"Box_IND_WpsLaunch_F",
+"Box_IND_WpsSpecial_F"
 ];
 
 {

@@ -49,7 +49,7 @@ loadGunStore = "client\systems\gunStore\loadGunStore.sqf" call mf_compile;
 gearProperties = "client\functions\gearProperties.sqf" call mf_compile;
 getCapacity = "client\functions\getCapacity.sqf" call mf_compile;
 getItemInfo = "client\functions\getItemInfo.sqf" call mf_compile;
-requestStoreObject = "client\functions\requestStoreObject.sqf" call mf_compile;
+requestStoreObject = "client\functions\requestStoreObject.sqf" call mf_compile; 
 
 // Custom paint/textures on vehicles
 applyVehicleTexture = "client\systems\vehicleStore\applyVehicleTexture.sqf" call mf_compile;
@@ -57,6 +57,6 @@ applyVehicleTexture = "client\systems\vehicleStore\applyVehicleTexture.sqf" call
 if (isNil "TPG_fnc_MP") then { TPG_fnc_MP = "\A3\functions_f\MP\fn_MP.sqf" call mf_compile };
 if (isNil "TPG_fnc_MPexec") then { TPG_fnc_MPexec = "\A3\functions_f\MP\fn_MPexec.sqf" call mf_compile };
 
-player groupChat "Wasteland - Client Compile Complete";
+player groupChat "GSNGaming.com A3WL Stratis - Client Compile Complete";
 sleep 1;
 playerCompiledScripts = true;

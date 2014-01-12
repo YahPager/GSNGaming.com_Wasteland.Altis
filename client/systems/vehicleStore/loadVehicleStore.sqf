@@ -25,39 +25,17 @@ currentOwnerID = _owner;
 	{
 		// The array of which vehicle types are unvailable at this store 
 		{
-                        switch (_x) do
-                        {
-                                case "Land":
-                                {
-                                        (_Dialog displayCtrl vehshop_button0) ctrlShow false;
-                                };
-                                case "Armored":
-                                {
-                                        (_Dialog displayCtrl vehshop_button1) ctrlShow false;
-                                };
-                                case "Tanks":
-                                {
-                                        (_Dialog displayCtrl vehshop_button2) ctrlShow false;
-                                };                                
-                                case "Helicopters":
-                                {
-                                        (_Dialog displayCtrl vehshop_button3) ctrlShow false;
-                                };
-                                case "Planes":
-                                {
-                                        (_Dialog displayCtrl vehshop_button4) ctrlShow false;
-                                };
-                                case "Boats":
-                                {
-                                        (_Dialog displayCtrl vehshop_button5) ctrlShow false;
-                                };
-                                /*
-                                case "Submarines":
-                                {
-                                        _subButton        ctrlShow false;
-                                };
-                                */
-                        };
-                } forEach (_x select 3);
+			switch (_x) do 
+			{
+				case "Boats": 
+				{
+					_boatButton ctrlShow false;
+				};
+				case "Submarines":
+				{
+					_subButton	ctrlShow false;
+				};
+			};
+		} forEach (_x select 3);
 	};
 } foreach (call storeOwnerConfig);
