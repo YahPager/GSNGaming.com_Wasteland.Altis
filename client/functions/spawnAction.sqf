@@ -37,25 +37,22 @@ spawnActionHandle = _params spawn
 	ppEffectDestroy BIS_fnc_feedback_fatigueBlur;
 	ppEffectDestroy BIS_fnc_feedback_damageBlur; 
 
-	switch (_switch) do 
-	{
-		case 0:
-		{
-			_scriptHandle = [] execVM "client\functions\spawnRandom.sqf";
-			waitUntil {scriptDone _scriptHandle};
-		};
-		case 1:
-		{
-			if (showBeacons) then
-			{ 	
-				_scriptHandle = [_buttonText] execVM "client\functions\spawnOnBeacon.sqf";
-				waitUntil {scriptDone _scriptHandle};
-			} else {
-				_scriptHandle = [_buttonText] execVM "client\functions\spawnInTown.sqf";
-				waitUntil {scriptDone _scriptHandle};
-			}; 
-		};
-	};
+        switch (_switch) do
+        {
+                case 0:
+                {
+                        call compile preprocessFileLineNumbers "client\functions\spawnRandom.sqf";
+                };
+                case 1:
+                {
+                        if (showBeacons) then
+                        {
+                                call compile preprocessFileLineNumbers "client\functions\spawnOnBeacon.sqf";
+                        } else {
+                                call compile preprocessFileLineNumbers "client\functions\spawnInTown.sqf";
+                        };
+                };
+        };
 
 	if(isNil{client_firstSpawn}) then {
 		client_firstSpawn = true;
