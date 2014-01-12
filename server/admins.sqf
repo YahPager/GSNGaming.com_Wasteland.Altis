@@ -1,46 +1,36 @@
-//	@file Name: admins.sqf
-
 if (!isServer) exitWith {};
 
 if (loadFile (externalConfigFolder + "\admins.sqf") != "") then
 {
-	call compile preprocessFileLineNumbers (externalConfigFolder + "\admins.sqf");
-}
-else
-{
-	// Admin menu (U key) access levels
+    call compile preprocessFileLineNumbers (externalConfigFolder + "\admins.sqf");
+} else {
 
-	/*******************************************************
-	 Player UID examples :
+    // Low Administrators: manage & spectate players, remove hacked vehicles
+    lowAdmins = 
+    [
+        "76561198039468603", //8603 = JackDee
+        "76561197974325742", //5742 = Poppy
+        "76561198018964268", //4268 = Pager
+        "76561198016350169", //0169 = Troutman
+        "76561198041728491" //8491 = SilentOperator6
+    ];
 
-		"1234567887654321", // Meatwad
-		"8765432112345678", // Master Shake
-		"1234876543211234", // Frylock
-		"1337133713371337"  // Carl
+    // High Administrators: manage & spectate players, remove hacked vehicles, show player tags
+    highAdmins = 
+    [
+        // Put player UIDs here
+    ];
 
-	 Important: Don't put a comma (,) at the end of the last one
-	********************************************************/
-
-	// Low Administrators: manage & spectate players, remove hacked vehicles
-	lowAdmins = compileFinal str
-	[
-		// Put player UIDs here
-	];
-
-	// High Administrators: manage & spectate players, remove hacked vehicles, show player tags
-	highAdmins = compileFinal str
-	[
-		// Put player UIDs here
-	];
-
-	// Server Owners: access to everything
-	serverOwners = compileFinal str
-	[
-		// Put player UIDs here
-	];
-
-	/********************************************************/
-};
+    // Server Owners: access to everything
+    serverOwners = 
+    [
+        "76561197963035830",// Headword
+        "76561197962768890", //8890 = LightEightSix
+        "76561198023400574", //0574 = Paronity    
+        "76561197994685469", //5469 = PaladinZero
+        "76561197978927617" //7617 = BadBadRobot
+        ];
+    };
 
 if (typeName lowAdmins == "ARRAY") then { lowAdmins = compileFinal str lowAdmins };
 if (typeName highAdmins == "ARRAY") then { highAdmins = compileFinal str highAdmins };
