@@ -6,31 +6,31 @@ if (loadFile (externalConfigFolder + "\admins.sqf") != "") then
 } else {
 
     // Low Administrators: manage & spectate players, remove hacked vehicles
-    lowAdmins = 
+    lowAdmins =
     [
-        "76561198039468603", //8603 = JackDee
-        "76561197974325742", //5742 = Poppy
-        "76561198018964268", //4268 = Pager
-        "76561198016350169", //0169 = Troutman
-        "76561198041728491" //8491 = SilentOperator6
+    "76561198039468603", //8603 = JackDee
+    "76561197974325742", //5742 = Poppy
+    "76561198018964268", //4268 = Pager
+    "76561198016350169", //0169 = Troutman
+    "76561198041728491" //8491 = SilentOperator6
     ];
 
     // High Administrators: manage & spectate players, remove hacked vehicles, show player tags
-    highAdmins = 
+    highAdmins =
     [
-        // Put player UIDs here
+    // Put player UIDs here
     ];
 
     // Server Owners: access to everything
-    serverOwners = 
+    serverOwners =
     [
-        "76561197963035830",// Headword
-        "76561197962768890", //8890 = LightEightSix
-        "76561198023400574", //0574 = Paronity    
-        "76561197994685469", //5469 = PaladinZero
-        "76561197978927617" //7617 = BadBadRobot
-        ];
-    };
+    "76561197963035830",// Headword
+    "76561197962768890", //8890 = LightEightSix
+    "76561198023400574", //0574 = Paronity
+    "76561197994685469", //5469 = PaladinZero
+    "76561197978927617" //7617 = BadBadRobot
+    ];
+};
 
 if (typeName lowAdmins == "ARRAY") then { lowAdmins = compileFinal str lowAdmins };
 if (typeName highAdmins == "ARRAY") then { highAdmins = compileFinal str highAdmins };
