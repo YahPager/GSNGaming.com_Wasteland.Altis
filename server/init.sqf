@@ -108,39 +108,33 @@ if (["A3W_buildingLoot", 0] call getPublicVar > 0) then
 if (["A3W_serverSpawning", 0] call getPublicVar > 0) then
 {
     diag_log "WASTELAND SERVER - Initializing Server Spawning";
-	
-	if (["A3W_heliSpawning", 0] call getPublicVar > 0) then
-	{
-		_heliSpawn = [] execVM "server\functions\staticHeliSpawning.sqf";
-		waitUntil {sleep 0.1; scriptDone _heliSpawn};
-	};
-	
-	_vehSpawn = [] execVM "server\functions\vehicleSpawning.sqf";
-	waitUntil {sleep 0.1; scriptDone _vehSpawn};
-	
-	if (["A3W_planeSpawning", 0] call getPublicVar > 0) then
-	{
-		_planeSpawn = [] execVM "server\functions\planeSpawning.sqf";
-		waitUntil {sleep 0.1; scriptDone _planeSpawn};
-	};
-	
-	if (["A3W_boatSpawning", 0] call getPublicVar > 0) then
-	{
-		_boatSpawn = [] execVM "server\functions\boatSpawning.sqf";
-		waitUntil {sleep 0.1; scriptDone _boatSpawn};
-	};
-	
-	if (["A3W_baseBuilding", 0] call getPublicVar > 0) then
-	{
-		_objSpawn = [] execVM "server\functions\objectsSpawning.sqf";
-		waitUntil {sleep 0.1; scriptDone _objSpawn};
-	};
-	
-	if (["A3W_boxSpawning", 0] call getPublicVar > 0) then
-	{
-		_boxSpawn = [] execVM "server\functions\boxSpawning.sqf";
-		waitUntil {sleep 0.1; scriptDone _boxSpawn};
-	};
+        
+        if (["A3W_heliSpawning", 0] call getPublicVar > 0) then
+        {
+                call compile preprocessFileLineNumbers "server\functions\staticHeliSpawning.sqf";
+        };
+
+        call compile preprocessFileLineNumbers "server\functions\vehicleSpawning.sqf";
+
+        if (["A3W_planeSpawning", 0] call getPublicVar > 0) then
+        {
+                call compile preprocessFileLineNumbers "server\functions\planeSpawning.sqf";
+        };
+        
+        if (["A3W_boatSpawning", 0] call getPublicVar > 0) then
+        {
+                call compile preprocessFileLineNumbers "server\functions\boatSpawning.sqf";
+        };
+        
+        if (["A3W_baseBuilding", 0] call getPublicVar > 0) then
+        {
+                call compile preprocessFileLineNumbers "server\functions\objectsSpawning.sqf";
+        };
+        
+        if (["A3W_boxSpawning", 0] call getPublicVar > 0) then
+        {
+                call compile preprocessFileLineNumbers "server\functions\boxSpawning.sqf";
+        };
 };
 
 // Hooks for new players connecting, in case we need to manually update state
