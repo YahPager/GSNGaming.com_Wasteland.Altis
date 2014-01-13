@@ -26,7 +26,7 @@ cityList = compileFinal str
 	["Town_14", 220, "Charkia"],
 	["Town_15", 220, "Chalkeia"],
 	["Town_16", 140, "Oreokastro"],
-	["Town_17", 400, "Telos Hospital"],
+	["Town_17", 360, "Telos Hospital"],
 	["Town_18", 200, "Telos Airbase"],
 	["Town_19", 200, "Syrta"],
 	["Town_20", 260, "Airbase Military Area"],
