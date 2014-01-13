@@ -18,46 +18,46 @@ _DEBUG = format ["%1", _this select 0];
 // example: my_fnc_name = {diag_log "hey"} call mf_compile;
 mf_compile = compileFinal
 ('
-	private ["_path", "_code"];
-	_path = "";
-	
-	switch (toUpper typeName _this) do {
-		case "STRING": {
-			_path = _this;
-		};
-		case "ARRAY": {
-			_path = format["%1\%2", _this select 0, _this select 1];
-		};
-		case "CODE": {
-			_code = toArray str _this;
-			_code set [0, (toArray " ") select 0];
-			_code set [count _code - 1, (toArray " ") select 0];
-		};
-	};
-	
-	if (isNil "_code") then {
-		if (' + _DEBUG + ') then {
-			compile format ["call compile preProcessFileLineNumbers ""%1""", _path]
-		} else {
-			compileFinal preProcessFileLineNumbers _path
-		};
-	} else {
-		compileFinal toString _code
-	};
+private ["_path", "_code"];
+_path = "";
+
+switch (toUpper typeName _this) do {
+    case "STRING": {
+        _path = _this;
+    };
+    case "ARRAY": {
+        _path = format["%1\%2", _this select 0, _this select 1];
+    };
+    case "CODE": {
+        _code = toArray str _this;
+        _code set [0, (toArray " ") select 0];
+        _code set [count _code - 1, (toArray " ") select 0];
+    };
+};
+
+if (isNil "_code") then {
+    if (' + _DEBUG + ') then {
+        compile format ["call compile preProcessFileLineNumbers ""%1""", _path]
+    } else {
+        compileFinal preProcessFileLineNumbers _path
+    };
+} else {
+    compileFinal toString _code
+};
 ');
 
 // Simple command I use to make initialization scripts clean and simple.
 // uses mf_ namespace to avoid any issues.
 mf_init =
 {
-	private "_path";
-	_path = "";
-	if (typeName _this == "STRING") then {
-		_path = _this;
-	} else {
-		_path = format["%1\%2", _this select 0, _this select 1];
-	};
-	_path call compile preProcessFileLineNumbers format["%1\init.sqf", _path];
+    private "_path";
+    _path = "";
+    if (typeName _this == "STRING") then {
+        _path = _this;
+    } else {
+        _path = format["%1\%2", _this select 0, _this select 1];
+    };
+    _path call compile preProcessFileLineNumbers format["%1\init.sqf", _path];
 } call mf_compile;
 
 _clientFunc = "client\functions";
