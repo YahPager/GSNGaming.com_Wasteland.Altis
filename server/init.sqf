@@ -48,7 +48,7 @@ A3W_baseSaving = 0;          // Save base objects between restarts (0 = no, 1 = 
 PDB_ServerID = "any";        // iniDB saves prefix (change this in case you run multiple servers from the same folder)
 
 // load external config
-if (loadFile (externalConfigFolder + "\main_config.sqf") != "") then
+/*if (loadFile (externalConfigFolder + "\main_config.sqf") != "") then
 {
     call compile preprocessFileLineNumbers (externalConfigFolder + "\main_config.sqf");
 } else {
@@ -87,7 +87,7 @@ if (["A3W_baseSaving", 0] call getPublicVar > 0 || {["config_player_saving_enabl
     };
 };
 
-/*if (!isNil "A3W_startHour" || !isNil "A3W_moonLight") then
+if (!isNil "A3W_startHour" || !isNil "A3W_moonLight") then
 {
 	private ["_monthDay", "_startHour"];
 	_monthDay = if (["A3W_moonLight", 0] call getPublicVar > 0) then { 10 } else { 25 };
@@ -152,7 +152,7 @@ if (["A3W_serverMissions", 0] call getPublicVar > 0) then
     sleep 5;
     [] execVM "server\missions\mainMissionController.sqf";
     sleep 5;
-    //[] execVM "server\missions\moneyMissionController.sqf";
+    /*[] execVM "server\missions\moneyMissionController.sqf";*/ //Commented out till fixed.
 };
 
 // Start clean-up loop
