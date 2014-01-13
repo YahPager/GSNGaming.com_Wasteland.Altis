@@ -13,19 +13,19 @@ player createDiaryRecord["GSN",
 [
 "v1",
 "
-<br/>
-	[Pilot] - GSNGaming.com Alpha Version of our ArmA 3 Wasteland based off of Team Wasteland Altis 0.9f.<br/>
-	[Gun Store] - Where you can get a wide variety of Weapons, Ammo and Equipment.<br/>
-	[General Store] - Has Food, Water, Jerry Cans, Spawn Beacons, and Camo Netting.<br/>
-	[Vehicle Store] - Where you can get almost any Vehicle for a price.<br/>
-	[Vehicle Service] - Is where you can pull up and Refuel, Repair, and Rearm your vehicle.<br/>
-	[First-Aid] - If your not a medic and need healed you can go in this building and get Healed.<br/>
-	[Heli Service] - Same as Vehicle Service but for Heli. You must be inside the circle.<br/>
-        [Money Missions] - Will be turned OFF till they are fixed.<br/>
-	[For Now] - Light Tank's, MBT's, Planes and APC's. do not spawn and are not in Missions.<br/>
-	[Errors] - Are likely and will be fixed when found within a day or two.<br/>
-	[Report] - Errors that you find you can report them to our Forums @ GSNGaming.com.<br/>
-	[Modifier] - <font size='16'>GSN Pager This is the GSNGaming.com Version of the Team Wasteland Mod. Their Code Our Tweaking.</font><br/>
+<br/> [Pilot] - GSNGaming.com Alpha Version of our ArmA 3 Wasteland based off of Team Wasteland Altis 0.9f.
+<br/> [Gun Store] - Where you can get a wide variety of Weapons, Ammo and Equipment.
+<br/> [General Store] - Has Food, Water, Jerry Cans, Spawn Beacons, and Camo Netting.
+<br/> [Vehicle Store] - Where you can get almost any Vehicle for a price.
+<br/> [Vehicle Service] - Is where you can pull up and Refuel, Repair, and Rearm your vehicle.
+<br/> [Heli Service] - Same as Vehicle Service but for Heli. You must land on the Heli Pad.
+<br/> [Boat Service] - Same as Vehicle Service but for Boats. Just pull in thats it.
+<br/> [First-Aid] - If your not a medic and need healed you can go in this building and get Healed.
+<br/> [Money Missions] - Will be turned OFF till they are fixed.
+<br/> [For Now] - Light Tank's, MBT's, & Planes do not spawn and will not be in Missions.
+<br/> [Errors] - Are likely and will be fixed when found within a day or two.
+<br/> [Report] - Errors that you find you can report them to our Forums @ GSNGaming.com.
+<br/> [Modifier] - GSN Pager This is the GSNGaming.com Version of the Team Wasteland Mod. Their Code Our Tweaking.<br/>
 "
 ]
 ];
