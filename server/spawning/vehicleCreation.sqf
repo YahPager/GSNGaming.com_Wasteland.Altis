@@ -13,25 +13,23 @@ _type = 0;  //test due to undefined variable errors..
 
 if (count _this > 1) then
 {
-	_vehicleType = _this select 1;	
-	
-	switch (true) do
-	{
-		case ({_vehicleType == _x} count civilianVehicles > 0):       { _type = 0 };
-		case ({_vehicleType == _x} count lightMilitaryVehicles > 0):  { _type = 1 };
-		case ({_vehicleType == _x} count mediumMilitaryVehicles > 0): { _type = 2 };
-	};
-}
-else
-{
-	_num = random 100;
+    _vehicleType = _this select 1;
 
-	switch (true) do
-	{
-		case (_num < 25): { _vehicleType = mediumMilitaryVehicles call BIS_fnc_selectRandom; _type = 2 };
-		case (_num < 50): { _vehicleType = lightMilitaryVehicles call BIS_fnc_selectRandom; _type = 1 };
-		default           { _vehicleType = civilianVehicles call BIS_fnc_selectRandom; _type = 0 };
-	};
+    switch (true) do
+    {
+        case ({_vehicleType == _x} count civilianVehicles > 0):       { _type = 0 };
+        case ({_vehicleType == _x} count lightMilitaryVehicles > 0):  { _type = 1 };
+        case ({_vehicleType == _x} count mediumMilitaryVehicles > 0): { _type = 2 };
+    };
+} else {
+    _num = random 100;
+
+    switch (true) do
+    {
+        case (_num < 25): { _vehicleType = mediumMilitaryVehicles call BIS_fnc_selectRandom; _type = 2 };
+        case (_num < 50): { _vehicleType = lightMilitaryVehicles call BIS_fnc_selectRandom; _type = 1 };
+        default           { _vehicleType = civilianVehicles call BIS_fnc_selectRandom; _type = 0 };
+    };
 };
 
 //_pos = [_markerPos, 2, 25, ( if (_type == 1) then { 2 } else { 5 } ), 0, 60 * (pi / 180), 0, [], [_markerPos]] call BIS_fnc_findSafePos;
@@ -53,18 +51,18 @@ _vehicle setDamage (random 0.5);
 
 // Remove wheel damage
 {
-	_hitPoint = configName _x;
-	if (["Wheel", _hitPoint] call fn_findString != -1) then
-	{
-		_vehicle setHitPointDamage [_hitPoint, 0];
-	};
+    _hitPoint = configName _x;
+    if (["Wheel", _hitPoint] call fn_findString != -1) then
+    {
+        _vehicle setHitPointDamage [_hitPoint, 0];
+    };
 } forEach (_vehicleType call getHitPoints);
 
 if (_vehicleType isKindOf "Offroad_01_armed_base_F") then
 {
-	_vehicle removeMagazinesTurret ["100Rnd_127x99_mag_Tracer_Yellow", [0]];
-	_vehicle addMagazineTurret ["100Rnd_127x99_mag_Tracer_Yellow", [0]];
-	reload _vehicle;
+    _vehicle removeMagazinesTurret ["100Rnd_127x99_mag_Tracer_Yellow", [0]];
+    _vehicle addMagazineTurret ["100Rnd_127x99_mag_Tracer_Yellow", [0]];
+    reload _vehicle;
 };
 
 if (_type > 1) then { _vehicle setVehicleAmmo (random 1.0) };
