@@ -21,12 +21,12 @@ if (isNull player) then { X_JIP = true };
 
 if (!isDedicated) then
 {
-	[] spawn
-	{
-		titleText ["Welcome to A3Wasteland, please wait for your client to initialize", "BLACK", 0];
-		waitUntil {!isNull player};
-		client_initEH = player addEventHandler ["Respawn", {removeAllWeapons (_this select 0)}];
-	};
+    [] spawn
+    {
+        titleText ["Welcome to A3Wasteland, please wait for your client to initialize", "BLACK", 0];
+        waitUntil {!isNull player};
+        client_initEH = player addEventHandler ["Respawn", {removeAllWeapons (_this select 0)}];
+    };
 };
 
 //init Wasteland Core
@@ -36,23 +36,23 @@ if (!isDedicated) then
 
 if (!isDedicated) then
 {
-	waitUntil {!isNull player};
+    waitUntil {!isNull player};
 
-	//Wipe Group.
-	if (count units player > 1) then
-	{  
-		diag_log "Player Group Wiped";
-		[player] join grpNull;
-	};
+    //Wipe Group.
+    if (count units player > 1) then
+    {
+        diag_log "Player Group Wiped";
+        [player] join grpNull;
+    };
 
-	[] execVM "client\init.sqf";
+    [] execVM "client\init.sqf";
 };
 
 if (isServer) then
 {
-	diag_log format ["############################# %1 #############################", missionName];
-	diag_log "WASTELAND SERVER - Initializing Server";
-	[] execVM "server\init.sqf";
+    diag_log format ["############################# %1 #############################", missionName];
+    diag_log "WASTELAND SERVER - Initializing Server";
+    [] execVM "server\init.sqf";
 };
 
 //init 3rd Party Scripts
