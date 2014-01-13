@@ -20,63 +20,63 @@ clearItemCargoGlobal _box;
 switch (_boxType) do
 {
     case "mission_USLaunchers":
-	{
+    {
     	_boxItems =
-		[
-			// Item type, Item class, # of items, # of magazines per weapon
-			["wep", "launch_RPG32_F", 2, 4],
-			["wep", "launch_NLAW_F", 2, 4],
-			["wep", "launch_Titan_F", 2, 4],
-			["wep", "launch_Titan_Short_F", 2, 4],
-			["mag", "ClaymoreDirectionalMine_Remote_Mag", 3],
-			["mag", "DemoCharge_Remote_Mag", 3]
-		];
-        };
+        [
+        // Item type, Item class, # of items, # of magazines per weapon
+        ["wep", "launch_RPG32_F", 2, 4],
+        ["wep", "launch_NLAW_F", 2, 4],
+        ["wep", "launch_Titan_F", 2, 4],
+        ["wep", "launch_Titan_Short_F", 2, 4],
+        ["mag", "ClaymoreDirectionalMine_Remote_Mag", 3],
+        ["mag", "DemoCharge_Remote_Mag", 3]
+        ];
+    };
     case "mission_USSpecial":
-	{
+    {
     	_boxItems =
-		[
-			// Item type, Item class, # of items, # of magazines per weapon
-			["wep", "Rangefinder", 5],
-			["itm", "Medikit", 3],
-			["itm", "Toolkit", 1],
-			["wep", "srifle_LRR_SOS_F", 1, 10],
-			["wep", "srifle_GM6_SOS_F", 1, 10],
-			["wep", "srifle_DMR_01_F", 1, 5],
-			["wep", "srifle_EBR_F", 1, 5],
-			["wep", "LMG_Mk200_F", 1, 4],
-			["wep", "LMG_Zafir_F", 1, 4],
-			["mag", "150Rnd_762x51_Box", 1],
-			["mag", "10Rnd_762x51_Mag", 5],
-			["mag", "9Rnd_45ACP_Mag", 5]
-		];
-        };
+        [
+        // Item type, Item class, # of items, # of magazines per weapon
+        ["wep", "Rangefinder", 5],
+        ["itm", "Medikit", 3],
+        ["itm", "Toolkit", 1],
+        ["wep", "srifle_LRR_SOS_F", 1, 10],
+        ["wep", "srifle_GM6_SOS_F", 1, 10],
+        ["wep", "srifle_DMR_01_F", 1, 5],
+        ["wep", "srifle_EBR_F", 1, 5],
+        ["wep", "LMG_Mk200_F", 1, 4],
+        ["wep", "LMG_Zafir_F", 1, 4],
+        ["mag", "150Rnd_762x51_Box", 1],
+        ["mag", "10Rnd_762x51_Mag", 5],
+        ["mag", "9Rnd_45ACP_Mag", 5]
+        ];
+    };
     case "mission_USSpecial2":
-	{
+    {
     	_boxItems =
-		[
-			// Item type, Item class, # of items, # of magazines per weapon
-			["wep", "Rangefinder", 5],
-			["wep", "arifle_TRG21_GL_F", 2, 5],
-			["wep", "arifle_Katiba_GL_F", 2, 5],
-			["wep", "arifle_MX_GL_F", 2, 5],
-			["wep", "srifle_LRR_SOS_F", 2, 10],
-			["wep", "srifle_GM6_SOS_F", 2, 10]
-		];
-        };
-	case "mission_Main_A3snipers":
-	{
+        [
+        // Item type, Item class, # of items, # of magazines per weapon
+        ["wep", "Rangefinder", 5],
+        ["wep", "arifle_TRG21_GL_F", 2, 5],
+        ["wep", "arifle_Katiba_GL_F", 2, 5],
+        ["wep", "arifle_MX_GL_F", 2, 5],
+        ["wep", "srifle_LRR_SOS_F", 2, 10],
+        ["wep", "srifle_GM6_SOS_F", 2, 10]
+        ];
+    };
+    case "mission_Main_A3snipers":
+    {
     	_boxItems =
-		[
-			// Item type, Item class, # of items, # of magazines per weapon
-			["wep", "srifle_LRR_SOS_F", 1, 5],
-			["wep", "srifle_GM6_SOS_F", 1, 5],
-			["wep", "srifle_EBR_F", 1, 5],
-			["wep", "srifle_DMR_01_F", 1, 5],
-			["wep", "Rangefinder", 2],
-			["itm", "optic_DMS", 1]
-		];
-        };
+        [
+        // Item type, Item class, # of items, # of magazines per weapon
+        ["wep", "srifle_LRR_SOS_F", 1, 5],
+        ["wep", "srifle_GM6_SOS_F", 1, 5],
+        ["wep", "srifle_EBR_F", 1, 5],
+        ["wep", "srifle_DMR_01_F", 1, 5],
+        ["wep", "Rangefinder", 2],
+        ["itm", "optic_DMS", 1]
+        ];
+    };
 };
 
 [_box, _boxItems] call processItems;
